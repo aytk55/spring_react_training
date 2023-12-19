@@ -1,0 +1,82 @@
+/* Masaüstü stiller */
+.container {
+  display: flex;
+  align-items: flex-start;
+  margin: 60px;
+  margin-top: 100px;
+}
+
+.filter {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.ilanlar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  flex-grow: 1;
+}
+
+.ilan-box {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.ilan-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ilan-box img {
+  width: 100%;
+  max-height: 300px;
+  min-height: 300px;
+  
+  object-fit: cover;
+}
+
+.ilan-details {
+  margin-top: 10px;
+}
+
+.ilan-details p {
+  margin: 5px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* Mobil dostu stiller */
+@media (max-width: 768px) {
+  .container {
+    margin: 0px;
+    width: 100%;
+    flex-direction: column; /* Mobilde sıralama düzenini değiştirmek için */
+    align-items: center; /* Mobilde merkezi hizalamak için */
+  }
+  
+  .filter {
+    
+    margin-top: 100px;
+    width: 100%; /* Filtreyi mobilde tam genişlikte yapmak için */
+    margin-right: 0; /* Sağa boşluk eklememek için */
+    margin-bottom: 20px; /* Filtre ile ilanlar arasına boşluk bırakmak için */
+  }
+  
+  .ilanlar {
+    width: 100%; /* İlanları mobilde tam genişlikte yapmak için */
+  }
+  .ilan-box img {
+    width: 100%;
+    max-height: 350px;
+    min-height: 350px;
+    
+    object-fit: cover;
+  }
+}

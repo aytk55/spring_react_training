@@ -1,0 +1,95 @@
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed; /* Header'ı sabit pozisyona al */
+    top: 0; /* Header'ı tepeye sabitle */
+    width: 100%; /* Header'ı ekranın tamamını kaplayacak şekilde genişlet */
+    background-color: #ffffff;
+    z-index: 1; /* Diğer öğelerin üstünde göster */
+    height: 75px;
+  }
+
+  .logo {
+    margin-left: 75px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-right: auto;
+  }
+
+  .nav__links {
+    margin-top: 25px;
+    list-style: none;
+    margin-right: 40px;
+  }
+
+  .nav__links li {
+    display: inline-block;
+    padding: 0 50px;
+  }
+
+  .nav__links li a {
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+  .nav__links li a:hover {
+    color: aqua;
+  }
+
+  button {
+    margin-right: 75px;
+    padding: 10px 45px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 20px;
+  }
+
+  button:hover {
+    color: aqua;
+  }
+
+  .cta {
+    margin-top: 10px;
+    margin-right: 40px;
+  }
+
+  /* Mobil dostu stiller */
+  @media (max-width: 768px) {
+   button{
+    margin-right: 20px;
+   }
+    .nav__links {
+      display: none; /* Mobilde menüyü gizle */
+      text-align: center; /* Mobilde metin merkezi hizalama */
+      padding: 10px 0; /* Mobilde daha az boşluk bırak */
+    }
+  
+    .nav__links li {
+      display: flex; /* Mobilde alt alta sırala */
+      padding: 10px 0; /* Mobilde daha az boşluk bırak */
+      
+    }
+  
+    .nav__links li a {
+      font-size: 20px;
+      transition: all 0.3s ease 0s;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      display: block; /* Mobilde linkleri alt alta sırala */
+      padding: 10px 0; /* Mobilde daha az boşluk bırak */
+    }
+  
+    .nav__links.active {
+      display: block; /* Mobilde menüyü görünür yap */
+    }
+    .cta{margin-right: 0px;
+      margin-left: 0px;
+    }
+    
+  }
