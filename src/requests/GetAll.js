@@ -15,7 +15,7 @@ function GetAll() {
   const [pageSize, setPageSize] = useState(10); 
   const [totalPages, setTotalPages] = useState(1);
   useEffect(() => {
-    axios.get(`http://192.168.1.108:8080/ilanlar`, {
+    axios.get(`http://localhost:8080/ilanlar`, {
       params: {
         totalPages: totalPages,
         pageSize: pageSize
@@ -35,7 +35,7 @@ function GetAll() {
 
   const handleFilterClick = () => {
    
-    axios.get('http://192.168.1.108:8080/filter', {
+    axios.get('http://localhost:8080/filter', {
       params: {
         marka: marka || null,
         minPrice: minPrice || null,
